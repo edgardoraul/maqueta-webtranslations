@@ -1,0 +1,43 @@
+grid($columns = $gridColumns, $gap = $gridMargin, $name = $gridName)
+	$name = unquote($name)
+
+	// Small, one column
+	{s('[class*="%s-item--"]', $name)}
+		width s('calc(100% - %s)', $gap)
+		margin ($gap / 2)
+
+	// No small, with multiples columns
+	@media (min-width 48em)
+		.{$name}
+			display flex
+			flex-wrap wrap
+
+		// Base style for Grid items
+		{s('[class*="%s-item--"]', $name)}
+			width s('calc(%s - %s)', 100% / $columns, $gap)
+
+		// Columns
+		for $col in 1..$columns
+			{s('[class*="%s-item--"]', $name)}{s('[class*="--size%s"]', $col)}
+				width s('calc(%s - %s)', 100% / $columns * $col, $gap)
+
+		// Offsets
+		for $col in 1..($columns - 1)
+			{s('[class*="%s-item--"]', $name)}{s('[class*="--offset%s"]', $col)}
+				margin-left s('calc(%s + %s)', 100% / $columns * $col, $gap / 2)
+
+
+$gridName = Grilla
+$gridColumns = 12
+$gridMargin = .3em
+
+grid($gridColumns, $gridMargin, $gridName)
+
+
+// Para propósitos del ejemplo
+// [class*="Grid-item--"]
+//   height 4em
+//   background-color #01ff70
+//   box-shadow 0 0 0 1px darken(#01ff70, 20%) inset
+
+

@@ -1,0 +1,40 @@
+/*
+Listado de items de un portfolio de productos o lo que sea
+*/
+.portfolio
+	padding 3px
+	text-align center
+	padding-bottom 1em
+	header
+		margin-bottom 1em
+
+.contenedor__item
+	display inline-block
+	margin 0.2em auto
+	padding-right 1em
+	vertical-align top
+
+.item
+	border 1px solid $nube
+	max-width 290px
+	position relative
+	transition_comun()
+	&:hover
+	&:focus
+		border 1px solid $google
+		box-shadow 0px 0px 5px 5px $black
+		
+
+	figure
+		margin 0
+		padding 0
+		position relative
+		width 100%
+		img
+			display block
+			max-width 290px
+			width 100%
+	
+// @media only screen and (min-width:30em)
+// 	.contenedor__item
+// 		padding-right 0

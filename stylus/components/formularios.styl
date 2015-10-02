@@ -1,0 +1,246 @@
+// Formularios lo más completo que se pueda. 
+
+// Estilos en del type="file"
+form
+	text-align left
+
+fieldset
+	border-color $silver_claro
+	margin-bottom 1em
+	max-width 600px
+legend
+	color $gris_fuerte
+	padding-left 0.5em
+	padding-right 0.5em
+
+input[type="color"]
+input[type="datetime"]
+input[type="datetime-local"]
+input[type="date"]
+input[type="email"]
+input[type="number"]
+input[type="month"]
+input[type="password"]
+input[type="search"]
+input[type="tel"]
+input[type="text"]
+input[type="time"]
+input[type="url"]
+input[type="week"]
+textarea
+select
+	background $nube
+	// box-shadow inset 0px 0px 20px $silver
+	border none
+	box-sizing border-box
+	display block
+	margin 0.5em auto
+	max-width 600px
+	outline none
+	padding 0.5em
+	vertical-align top
+	width 100%
+	&:focus
+		// border 1px solid rgba(82, 168, 236, 0.8)
+		box-shadow 0px 0px 5px 1px $Celeste
+
+	
+input[type="file"]
+	display none
+
+input[type="radio"]
+	margin-right 0.1em
+		
+input[type="text"].captcha
+.wpcf7-captchac
+	display inline-block
+	margin auto
+	padding auto
+	vertical-align top
+	width auto
+	
+textarea[name="comment"]
+	margin-left 0
+	width auto
+
+.radio
+	display inline-block
+	margin 1em 1em 1em 0
+	cursor pointer
+
+// Formularios verticales => .vform y Formularios Horizonatles => .hform
+/*.hform
+	max-width 420px
+	width 100%
+	label
+		margin-bottom 0.5em
+		width 40%
+	input[type="color"]
+	input[type="datetime"]
+	input[type="datetime-local"]
+	input[type="date"]
+	input[type="email"]
+	input[type="number"]
+	input[type="month"]
+	input[type="password"]
+	input[type="search"]
+	input[type="tel"]
+	input[type="text"]
+	input[type="time"]
+	input[type="url"]
+	input[type="week"]
+	textarea
+	select
+		width 60%
+
+	input
+		&.pre
+		&.post
+			float left 
+			height 30px
+			width 45%
+	
+		&.pre-post
+			border-radius 0 !important
+			float left 
+			height 30px 
+			width 40%
+
+.vform
+	max-width 320px
+	width 100%
+	label
+		margin-bottom 0.5em
+		width 100%
+	input[type="color"]
+	input[type="datetime"]
+	input[type="datetime-local"]
+	input[type="date"]
+	input[type="email"]
+	input[type="number"]
+	input[type="month"]
+	input[type="password"]
+	input[type="search"]
+	input[type="tel"]
+	input[type="text"]
+	input[type="time"]
+	input[type="url"]
+	input[type="week"]
+	textarea
+	select
+		width 100%
+		
+	input
+		&.pre
+		&.post
+			float left
+			height 30px
+			width 75%
+
+		&.pre-post
+			border-radius 0 !important
+			float left 
+			height 30px 
+			width 70%
+
+
+.hform
+.vform
+	color #333
+	margin-bottom 20px
+	
+	fieldset
+		margin-bottom 10px
+	
+	label
+		display block
+		float left
+		text-align left
+		vertical-align middle
+
+	input[type="color"]
+	input[type="datetime"]
+	input[type="datetime-local"]
+	input[type="date"]
+	input[type="file"]
+	input[type="email"]
+	input[type="number"]
+	input[type="month"]
+	input[type="password"]
+	input[type="search"]
+	input[type="tel"]
+	input[type="text"]
+	input[type="time"]
+	input[type="url"]
+	input[type="week"]
+	select
+	textarea
+		background $white
+		border 1px solid $gray
+		border-radius(4px)
+		display block
+		font-size 13px
+		height 30px
+		line-height 21px 
+		margin-bottom 10px
+		padding 5px 10px
+		outline none	
+		transition all 0.4s ease-in-out
+		vertical-align middle
+		&:focus
+			// border 1px solid rgba(82, 168, 236, 0.8)
+			border 1px solid $Celeste
+			box-shadow( inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(81, 168, 236, 0.5) )
+			color #444
+
+	input[type="file"]
+		overflow none
+	
+	input
+		&.pre
+			border-radius 0 4px 4px 0
+
+		&.post
+			border-radius 4px 0 0 4px
+		
+	textarea
+		min-height 120px
+	
+	span
+		&.pre
+		&.post
+			background-color $NaranjaLadrillo
+			border 1px solid $gray
+			color $white
+			display block	
+			font-size 13px 
+			line-height 18px
+			height 30px
+			padding 5px 10px
+			position relative
+
+		&.pre
+			border-radius 4px 0 0 4px
+			float left
+			margin-right -1px
+
+		&.post
+			border-radius 0 4px 4px 0
+			margin-left -1px
+			float left
+			
+	span[type="submit"]
+		&.pre
+		&.post
+			background $NaranjaLadrillo
+			color $white
+			cursor pointer
+			&:hover
+				background $google
+*/				
+// Estilos particulares de alguna plantilla
+.formulario
+	display inline-block
+	margin-left 0.5em
+	margin-right 0.5em
+	vertical-align top

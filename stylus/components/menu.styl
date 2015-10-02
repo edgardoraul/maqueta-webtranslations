@@ -1,0 +1,49 @@
+// El menú de navegación. Precisamente el botón. La hamburguesa
+// Variables del color
+$color_del_menu 		?= $white_crema
+$color_del_menu_hover 	?= $rosa
+$color_del_menu_focus 	?= $rosa
+$color_del_menu_active 	?= $rosa_fuerte
+
+
+
+
+
+
+.menu
+	display inline-block
+	float right
+	// margin-right 0.5em
+	margin-top 0.5em
+	vertical-align middle
+	a
+		border-radius 0.3em
+		box-sizing border-box
+		display block
+		height 2.5em
+		overflow hidden
+		padding 0.3em 0.4em
+		text-align center
+		text-decoration none
+		width 3em
+		span
+			background $color_del_menu 
+			border-radius 1em
+			display block
+			height 0.3em
+			margin auto
+			transition all 0.1s ease-in-out
+			width 85%
+		span + span
+			margin-top 0.4em
+			
+		&:hover
+			span
+				background $color_del_menu_hover
+		&:active
+			span
+				background $color_del_menu_active
+				
+@media all and (min-width:50em)
+	.menu
+		display none

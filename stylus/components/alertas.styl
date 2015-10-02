@@ -1,0 +1,120 @@
+/*
+Los bloques de mensajes de alerta. Un simple ejemplo a continuación
+
+<div class="alerta alerta-gris">
+	<div class="alerta--icono">
+		<span class="icon-question2"></span>
+	</div>
+	<div class="alerta--mensaje">
+		<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+	</div>
+	<div class="alerta--close">
+		<a class="icon-x" href="#"></a>
+	</div>
+</div>
+
+*/
+
+
+// Formato general
+.alerta
+	// border-radius 0.2em
+	// border-style solid
+	// border-width 1px
+	// box-shadow -5px 5px 10px $black
+	box-sizing border-box
+	color $gris_fuerte
+	display inline-block
+	margin 0.5em auto
+	overflow hidden
+	transition_comun()
+	
+	// Alineando los div interiores
+	div
+		display table-cell
+		vertical-align middle
+
+
+/* Tipos de cuadros de mensajes */
+
+.alerta
+	// Precaución
+	&-rojo
+		border-color $rosa
+		.alerta--close
+			a
+				color $rosa_claro
+		.alerta--icono
+			background $rosa_claro
+	
+	// Información
+	&-azul
+		border-color $Celeste
+		.alerta--close
+			a
+				color $Celeste
+		.alerta--icono
+			background $Celeste
+	
+	// Atención
+	&-amarillo
+		border-color $amarillo
+		.alerta--close
+			a
+				color $amarillo
+		.alerta--icono
+			background $amarillo			
+	
+	// Todo ok
+	&-verde
+		border-color $VerdeClarito
+		.alerta--close
+			a
+				color $VerdeClarito
+		.alerta--icono
+			background $VerdeClarito
+			
+	// Una pregunta
+	&-gris
+		border-color $silver
+		.alerta--close
+			a
+				color $silver
+		.alerta--icono
+			background $silver
+
+/* Secciones interiores de los cuadros de mensajes */
+.alerta	
+	&--close
+	&--icono
+		font-size 3.5em
+		padding 0 0.5em
+	
+	&--close
+		border-left 1px solid inherit
+		padding 0
+		margin 0
+		a
+			display block
+			padding 0.5em
+			text-decoration none
+			// text-shadow_lindo()
+	&--icono
+		position relative
+		&:after
+			content ""
+			border 10px solid transparent
+			border-left-color $rosa_claro
+			position absolute
+			top 45%
+			right -20px
+			
+		span
+			color $white
+			// text-shadow_lindo()
+	
+	&--mensaje
+		padding 0.5em 0.5em 0.5em 1.5em
+		h3, h4, h5, h6, p
+			font-size 1.5em
+			margin 0

@@ -1,0 +1,46 @@
+/*
+Vidriera
+1. Aparecen en la home
+2. Tiene un ícono grande una imagen relacionada a su función.
+3. Tiene un título y un par de renglones.
+4. Típico para mostrar servicios del negocio.
+*/
+
+// Variables a usar
+$fondo_vidiera			?= $silver
+$color_borde_vidiera	?= $silver
+
+
+.Vidriera
+	text-align center
+	&--estante
+		border-radius 0.5em
+		display inline-block
+		max-width 17em
+		position relative
+
+		.imagen
+			border-bottom 1px solid $color_borde_vidiera
+			padding 1em
+			margin 1em auto
+			div
+				border 1px solid $color_borde_vidiera
+				border-radius 50%
+				overflow hidden
+				width auto
+				img
+					border 2px solid $white
+					border-radius 20em
+					display block
+					width 100%
+	
+		.contenido
+			color $gris_fuerte
+			padding 1em
+			h2, h3, h4, h5, h6
+				color $Celeste
+				
+@media only screen and (min-width:30em)
+	.Vidriera
+		&--estante
+			margin 0.2em

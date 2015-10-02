@@ -1,0 +1,66 @@
+// El formato de todas las tablas
+// Variables de las Tablas
+$table-celda-color 		?= $white 		// Color de la letra
+$tabla-celda-background ?= $nube		// Fondo de celdas
+$tabla-head-background 	?= $black	// Fondo del encabezado
+$tabla-borde-ancho 		?= 1px			// Ancho del borde
+$tabla-borde-color 		?= $gray		// Color del borde
+$tabla-tfoot-background	?= $black	// Fondo del pie de tabla
+
+
+// Tabla en general
+table
+	border $tabla-borde-ancho solid $tabla-borde-color
+	box-sizing border-box
+	display table
+	margin 0
+	caption
+		background $tabla-head-background
+		border $tabla-borde-ancho solid $tabla-borde-color
+		border-bottom none
+		color $table-celda-color
+		padding 0.5em 1em
+		text-transform uppercase
+
+
+// Cuerpo de la tabla
+tbody
+	// Para darle un pequeño separador
+	td + td
+		border-left $tabla-borde-ancho solid $tabla-borde-color	
+	// Filas ligeramente separadoas por un color de fondo
+	tr:nth-child(even)
+		background $tabla-celda-background
+
+
+// Para darle formatos a todoas las celdas
+td
+	padding 0.2em 0.5em
+
+
+// Encabezado
+thead
+	th
+		background $tabla-head-background
+		color $table-celda-color
+		font-family $baseHeadingFontFamily
+		font-size 1.1em
+		font-weight bolder
+		padding 0.5em 1em
+		&:first-letter
+			text-transform uppercase
+	// Para darle un pequeño separador
+	th + th
+		border-left $tabla-borde-ancho solid $tabla-borde-color
+
+
+// El pie de la tabla
+tfoot
+	td
+		background $tabla-tfoot-background
+		color $table-celda-color
+		font-size 0.8em
+		text-align right
+	// Para darle un pequeño separador
+	td + td
+		border-left $tabla-borde-ancho solid $tabla-borde-color

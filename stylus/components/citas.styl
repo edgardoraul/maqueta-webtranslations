@@ -1,0 +1,41 @@
+// Citas y los bloques
+
+blockquote
+cite
+	box-sizing border-box
+	color $gris_fuerte
+	font-size 1.2em
+	font-style italic 
+	position relative
+
+blockquote
+	border 1px dashed $silver
+	border-left 3px solid $Celeste
+	display table
+	padding 1em
+	margin 1em auto
+	text-align right
+	&:before
+		color $Celeste
+		content "\f063"
+		font-family "icon"
+		font-size 2em
+		font-style normal
+		left 0.2em
+		position absolute
+		top 0	
+
+/*cite
+	// color $VerdeClaro
+	&:after
+	&:before
+		color $Celeste
+		font-family "icon"
+		font-size 1em
+		font-style normal
+	&:after
+		content "\e605"
+		padding-left 0.5em
+	&:before
+		content "\e604"
+		padding-right 0.5em*/

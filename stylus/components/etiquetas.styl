@@ -1,0 +1,75 @@
+/*
+
+Etiquetas lindas para una oferta o llamada de atención
+<div class="etiqueta">
+	<span class="icon-star right"></span>Oferta
+</div>
+
+*/
+
+// Variables
+$fondo_etiqueta 	?= $amarillo
+$color_letra		?= $white
+$color_borde		?= $gray
+
+
+.etiqueta
+	background $fondo_etiqueta
+	border-radius 0 3px 0 0
+	box-shadow -7px 7px 10px $color_borde
+	box-sizing border-box
+	color $color_letra
+	display inline-block
+	height 30px
+	margin 1em 15px 1em 1em
+	padding-right 1em
+	padding-top 2px
+	padding-bottom 0
+	position absolute
+	right -1.6em
+	top 1em
+	text-shadow_lindo()
+	vertical-align baseline
+	
+	
+	[class^="icon-"], [class*=" icon-"]
+		border-right 1px dotted rgba($color_letra, 0.5)
+		margin-right 0.5em
+		padding-right 0.5em
+
+	&:before
+		border 15px solid transparent
+		border-right-color $fondo_etiqueta
+		border-left none
+		content ""
+		left -15px
+		position absolute
+		top 0
+	&:after
+		border 10px solid transparent
+		border-left-color $black
+		content ""
+		position absolute
+		bottom -10px
+		right -10px
+		z-index -1
+	
+	// Opciones de colores
+	&-rojo
+		background $google
+		&:before
+			border-right-color $google
+	&-verde
+		background $neferteris
+		&:before
+			border-right-color $neferteris
+	&-azul
+		background $azul_claro
+		&:before
+			border-right-color $azul_claro
+	&-negro
+		background $gris_fuerte
+		&:before
+			border-right-color $gris_fuerte
+			
+

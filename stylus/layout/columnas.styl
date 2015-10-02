@@ -1,0 +1,27 @@
+/*
+Columnas generales y sobre todo las del sitio web
+*/
+	
+.columna--right
+	display none
+
+@media all and (min-width:50em)
+	.columnas__2
+		column-count 2
+		padding 0.5em 0
+	
+	.columna--left
+	.columna--right
+		display inline-block
+		margin-top auto
+		vertical-align top
+
+	// Para el main 
+	.columna--left
+		width 49%
+
+	// Sidebar derecha
+	.columna--right
+		margin-left 1%
+		padding 0.5em 0 0 0
+		width 49%

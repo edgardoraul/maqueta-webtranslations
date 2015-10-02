@@ -1,0 +1,95 @@
+/**
+ * # Panel
+ 
+	<div class="Panel">
+		<h3>Título</h3>
+		<figure>
+			<img src="img/imagen.jpg" alt="algo" />
+			<figcaption>Algo</figcaption>
+		</figure>
+		<div class="Panel--contenido">
+			<p>Algo de contenido ...</p>
+		</div>
+	</div>
+*/
+
+$panel-background-color ?= $white
+$panel-border-color ?= $silver
+$panel-border-width ?= 1px
+
+.comment
+.Panel
+	box-shadow 0 $panel-border-width 0 $panel-border-color
+	box-sizing border-box
+	margin 1em auto
+	position relative
+	text-align left
+	
+	&--contenido	
+		figure
+		.avatar
+			margin 0 0 1em 0
+			max-width 600px
+			overflow hidden
+
+			
+			figcaption
+				background $nube
+				color $gray
+				font-style italic
+				padding 0.5em 1em
+				position relative
+				text-align center
+				&:first-letter
+					text-transform uppercase
+			
+
+			img
+				display block
+				position relative
+				width 100%
+			
+		figure.small
+			max-width 20em
+
+		// No hay necesidad de una clase. Sabemos que va a ser un título.
+		& > h2
+		& > h3
+		& > h4
+		& > h5
+		& > h6
+			margin 0.5em 0 0 0
+			padding 0.3em 0.3em 0.3em 0
+
+				
+	& > &--titular-centrado
+		margin 0.5em 0 0 0
+		padding 0.3em
+		text-align center
+		
+	&-borderless
+		background none
+		border none
+		
+	.elementos_post
+	.Panel-small--tag
+		color $gray
+
+@media all and (min-width:21em)
+	.Panel
+		&--contenido
+			overflow hidden
+			figure
+				// float left
+				margin-bottom 1em
+				margin-right auto
+				
+			
+@media all and (min-width:40em)
+	.Panel--contenedor
+		display inline-block
+		padding-right 0.5em
+		vertical-align top
+		width 49.5%
+	
+		

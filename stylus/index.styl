@@ -1,0 +1,127 @@
+/*
+ * # Stylus CSS Framework
+ */
+
+// Utilidades generales
+@import 'lib/nib'
+@import 'lib/normalize'
+// @import 'base/reset'
+
+// Estilos bases, mixins y funciones
+@import 'base/variables'
+@import 'base/mixins'
+@import 'base/fonts'
+// @import 'base/animations'
+@import 'base/base'
+@import 'base/headings'
+// @import 'base/grid'
+@import 'base/utility'
+
+// Componentes reutilizables
+// @import 'components/datepicker'
+@import 'components/lightbox'
+@import 'components/alertas'
+@import 'components/buttons'
+@import 'components/icons'
+@import 'components/panel'
+@import 'components/panel-small'
+@import 'components/navegacion'
+// @import 'components/tablas'
+@import 'components/menu'
+@import 'components/gotop'
+@import 'components/citas'
+// @import 'components/etiquetas'
+@import 'components/breadcrums'
+@import 'components/pagination'
+@import 'components/formularios'
+@import 'components/articulo'
+@import 'components/galeria'
+
+// Secciones de la web
+@import 'sections/header'
+@import 'sections/switcher'
+// @import 'sections/vidriera'
+// @import 'sections/vidriera-2'
+// @import 'sections/slider'
+// @import 'sections/portfolio-items'
+// @import 'sections/sidebar'
+@import 'sections/footer'
+@import 'sections/elementos_post'
+
+// Layouts de la web
+@import 'layout/columnas'
+@import 'layout/fondo'
+
+// Impresora
+// @import 'layout/print'
+
+/*
+
+body
+	background linear-gradient(to right, #eee 0%, #ddd 100%)
+	font-color #888
+	font-family "Helvetica Neu", helvetica, sans-serif
+	text-align center
+
+
+// Creamos la forma del switch
+label
+	background #444
+	border 1px solid #534563
+	border-radius 15px
+	cursor pointer
+	display inline-block
+	martin-top 5px
+	height 21px
+	padding 0
+	position relative
+	width 80px
+	
+// Ocultar el elemento
+input[type="checkbox"]
+	display none
+	&:checked + .toggle
+		margin-left 60px
+		margin-right 0
+	
+	&:checked + .toggle:before
+		display inline-block
+		opacity 1
+		visibility visible
+	&:checked + .toggle:after
+		opacity 0
+		visibility hidden
+	
+// Creamos el toggle o el elemento deslisante
+.toggle
+	background #e1e1e1
+	border 1px solid red
+	border-radius 100%
+	display inline-block
+	height 19px
+	margin-left 0
+	margin-right 60px
+	text-transform uppercase
+	transition all 0.3s ease-in-out
+	width 19px
+	
+	// La palabrota "On"
+	&:before 
+		color #0edd0e
+		content "On"
+		opacity 0
+		left 5px
+		position absolute
+		transition all 0.3s ease-in-out
+		visibility hidden
+
+	// agregamos la palabra off
+	&:after
+		color tomato
+		content "Off"
+		display inline-block
+		right 8px
+		opacity 1
+		position absolute
+		transition all 0.3s ease-in-out
+		visibility visible

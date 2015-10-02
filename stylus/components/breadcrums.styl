@@ -1,0 +1,42 @@
+// Las famosas miguitas de pan
+/*
+Un simple ejemplo
+<ul class="breadcrums">
+	<li class="breadcrums--label">Ud. está aquí: </li>
+	<li><a href="">Inicio</a></li>
+	<li><a href="">Medio</a></li>
+	<li><a href="">Final</a></li>
+	<li class="breadcrums-muted">Ya llegué</li>
+</ul>
+*/
+
+$fuente_size			?= 0.9em 
+$color					?= $google
+$color_enlace			?= $ladrillo
+$color_enlace_hover		?= $gris_fuerte
+$color_enlace_actual	?= $gray
+
+
+.breadcrums
+	padding 0.5em
+	font-size $fuente_size
+	li
+		color $color_enlace_hover
+		display inline-block
+		a
+			color $color_enlace
+			text-decoration none
+			&:hover
+			&:focus
+				text-decoration underline
+	
+	li + li:after
+		content "/"
+		margin auto 0.3em
+	
+	li.breadcrums-muted
+		color $color_enlace_actual
+	
+	li:last-child
+		&:after
+			content ""

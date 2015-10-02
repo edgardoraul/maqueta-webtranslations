@@ -1,0 +1,35 @@
+.gotop
+	background url('../img/gotop.png') no-repeat top left
+	// background $black url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8BAMAAADI0sRBAAAAA3NCSVQICAjb4U/gAAAAMFBMVEX///////////////////////////////////////////////////////////////9Or7hAAAAAEHRSTlMAESIzRFVmd4iZqrvM3e7/dpUBFQAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAHMSURBVDiNfZU7SwNBFIUn5oHEJljZWAgKCir5AybBwiKIirVgCkkn2GpjtBYCNpJGNxCwNIW9IAhWSvQHBCSlYBGD7OrudWYfM/fuzuRUu/NxZu/M3D3DmFJq/rjVulovMK0WLr6Ay3ve1dFqH0K5nSTdA6SnON0EontKZyCmM0zTr3H8V0R4K04BBopmv5LYq0i8n6QAo4hmNGZkX9VRgI8QP+jxb0An9RSg4eOyCQ/HzR3OnjFRAFH7lBl3Od4242+Ob/BAh+yQzRusj94dVsLYLbAsfm+zNLHvkE1x+LeIvUEKb4vOwPYuW6Fman/DW8rNE9Q+RK0gzNcVYh+xU/lsicMbEPuP2hVhbvo9ouy2wlZw8sSusFMQZqB2ha2obbDdjkqLzIF9TZYWLqyneo7bc3JhZVl3Mxzj9sg9lJtqqbMZyG/3WD6qoimxd6gWa+xyoaNxjeq3at9M3XgrUtnj/qHgL8qbsSWay4z9+LkzUWdcOETxkDPhWhAPhtmdMFtm9bgXRaY2uFwZmyUdfleJqwtNlLnLSfyIEjmVKN4hF04uNr1XY0RLFF+ymKqYaq6iRXlhfJ4nKV/eyYsPb4s6yjW9Ua8fzOGRf/qP/R7DCbc0AAAAAElFTkSuQmCC") no-repeat top left
+	border-radius 10em
+	bottom 0.5em
+	display inline-block
+	height 60px
+	opacity 0.5
+	padding 0
+	position fixed
+	right 0.5em
+	transition all 0.1s ease-in-out
+	width 60px
+	z-index 10
+	
+	&-mostrar
+		opacity 0.5
+	
+	&-ocultar
+		opacity 0
+	
+	&:hover
+		opacity 1
+	
+	&:active
+		background-color $rosa
+			
+
+@media all and (min-width: 40em)
+	.gotop
+		bottom 1em
+		right 1em
+		&-ocultar
+			bottom -5em
+

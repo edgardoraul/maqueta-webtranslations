@@ -1,0 +1,62 @@
+/**
+ * # Base
+ *
+ * Otros estilos base
+ */
+
+$fontSize ?= 16
+
+html
+	box-sizing border-box
+	color $fontColor
+	font-family $baseFontFamily
+	/*	
+	El font-size se calcula en base a la variable $fontSize. Indica el tamaño
+	base del texto en px, y lo convierte a em basándose en que el tamaño por
+	defecto es de 16px.
+	Al definirlo en el html, 1 REM será igual al valor de $fontSize, lo que nos
+	facilita trabajar con medidas en el resto del documento.
+	*/
+	font-size unit($fontSize / 16, 'em')
+	line-height 1.5
+	text-align center
+
+main
+	max-width 960px
+	margin-left auto
+	margin-right auto
+	padding 0.5em
+	
+@media all and (min-width:50em)
+	main
+		padding 0.5em 1em
+	
+a
+	color $rosa
+	font-style italic
+	text-decoration none
+	&:hover
+	&:focus
+		color $rosa_fuerte
+		text-decoration underline
+
+.video
+	margin 1em 0
+	video
+		display block
+		width 100%
+
+*
+:before
+:after
+	// box-sizing se define en el html, y se hereda en el resto de elementos.
+	// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+	box-sizing inherit
+	text-rendering optimizelegibility
+
+[class^="icon-"], [class*=" icon-"]
+	&.left
+		margin-left 1em
+	&.right
+		margin-right 1em
+

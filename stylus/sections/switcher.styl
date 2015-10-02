@@ -1,0 +1,25 @@
+// Switcher de idiomas
+.switcher
+	display inline-block
+	height 30px
+	margin 0.7em auto 0 auto
+	a
+		border-right 1px solid $gray
+		display table-cell
+		font-family $baseHeadingFontFamily
+		font-style normal
+		padding 0 0.5em
+	a + a
+		border-right none
+
+	.active
+		color $gris_fuerte
+		cursor default
+		pointer-events none
+		
+		
+@media all and (min-width:50em)
+	.switcher
+		float right
+		&--home
+			float left

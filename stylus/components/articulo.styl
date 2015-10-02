@@ -1,0 +1,38 @@
+// Artículo común y corriente.
+
+.articulo
+	text-align left
+	article
+		& > h3
+		& > h4
+		& > h5
+		& > h6
+			margin-top 0
+		figure
+			display block
+			margin 1em auto
+			img
+				display block
+				width 100%
+			figcaption
+				background $rosa
+				color $white
+				display block
+				font-size 0.9em
+				padding 0.5em 1em
+				text-align center
+			
+		
+@media all and (min-width:28em)
+	.articulo
+		article
+			overflow hidden
+			figure
+				display inline-block
+				float left
+				margin 0 1em 1em 0
+				max-width 450px
+			
+			figure:nth-child(even)
+				float right
+				margin 1em 0 1em 1em
