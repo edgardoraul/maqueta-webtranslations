@@ -57,17 +57,20 @@ input[type="text"].captcha
 	margin auto
 	padding auto
 	vertical-align top
-	width auto
+	width 6em
 	
 textarea[name="comment"]
 	margin-left 0
-	width auto
+	width 100%
 
 .radio
 	display inline-block
 	margin 1em 1em 1em 0
 	cursor pointer
 
+@media all and (min-width: 480px)
+	textarea[name="comment"]
+		width auto
 // Formularios verticales => .vform y Formularios Horizonatles => .hform
 /*.hform
 	max-width 420px

@@ -11,27 +11,29 @@ Un simple ejemplo
 */
 
 $fuente_size			?= 0.9em 
-$color					?= $google
-$color_enlace			?= $ladrillo
-$color_enlace_hover		?= $gris_fuerte
-$color_enlace_actual	?= $gray
+$color					?= $silver
+$color_enlace			?= $rosa
+$color_enlace_hover		?= $rosa_fuerte
+$color_enlace_actual	?= $silver
 
 
 .breadcrums
-	padding 0.5em
+	padding 0.5em 0
 	font-size $fuente_size
+	list-style none
 	li
-		color $color_enlace_hover
+		color $color
 		display inline-block
 		a
 			color $color_enlace
 			text-decoration none
 			&:hover
 			&:focus
+				color $color_enlace_hover
 				text-decoration underline
 	
 	li + li:after
-		content "/"
+		content " /"
 		margin auto 0.3em
 	
 	li.breadcrums-muted

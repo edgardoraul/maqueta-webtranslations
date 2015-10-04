@@ -12,77 +12,67 @@
 	position relative
 	text-align left
 	z-index 200
-	ul
-		background $black
-		display block
-		font-family $fuente-Titulos
-		height 0
-		margin 0
-		opacity 0
-		padding 0
-		// transition all 0.1s ease-in-out
-		// transition all 0.6s cubic-bezier(0.5, -0.5, 0.5, 1.5)
-		// transition all 0.3s	cubic-bezier(0.215, 0.610, 0.355, 1.000)
-		visibility hidden
-		width 100%
-	
-		li
-			display block
-			list-style none
-			position relative
-			a
-				color $gray
-				display block
-				font-family $fuente-Titulos
-				font-size 1.3em
-				font-style normal
-				padding 0.5em 1em
-				position relative
-				text-decoration none
-				transition all 0.1s ease-in-out
 
-				// Estilos al hover y al focus
-				&:hover
-				&:focus
-					background $black_suave
-					color $rosa_fuerte
-					
-				
-						
-		// Estilo solo al border superior exepto al primer item del menú
-		li + li
-			border-top 1px solid $gray
-			border-top 1px solid rgba($black_puro, 0.25)
-			box-shadow 0px 1px 0px 0px rgba($white, 0.075) inset
+.nav--listado
+	background $black
+	display block
+	font-family $fuente-Titulos
+	height 0
+	margin 0
+	opacity 0
+	padding 0
+	visibility hidden
+	width 100%
+	li
+		display block
+		list-style none
+		position relative
+		a
+			color $nube
+			display block
+			font-family $fuente-Titulos
+			font-size 1.3em
+			font-style normal
+			padding 0.5em 1em
+			position relative
+			text-decoration none
+			transition all 0.1s ease-in-out
+
+			// Estilos al hover y al focus
+			&:hover
+			&:focus
+				background $black_suave	
+			
+	// Estilo solo al border superior exepto al primer item del menú
+	li + li
+		border-top 1px solid $gray
+		border-top 1px solid rgba($black_puro, 0.25)
+		box-shadow 0px 1px 0px 0px rgba($white, 0.075) inset
 			
 // Estilos cuando está abierto o cerrado el menú de navegación
 .nav
 .menu
 	.nav--listado-abrir
 		height auto
-		// top 0
-		// left 0
 		opacity 1
 		visibility visible
 	.nav--listado-cerrar
 		height 0
-		// left -500px
 		opacity 0
 		visibility hidden
 
 // Estilos cuando el item está siendo visitado actualmente
-.nav
-.menu
-	ul
-		.current_menu_item
-		.current_page_item
-			a
-				color $white_crema
-				// background $black_suave
-				cursor default
-				pointer-events none
-				&:hover
-					text-decoration none
+.nav--listado
+	.current_menu_item
+	.current_page_item
+		a
+			background $black_fuerte
+			color $white
+			cursor default
+			pointer-events none
+			&:hover
+				background $black_fuerte
+				text-decoration none
 
 // Es para navegar de un post al siguiente y viceversa 
 .enlaces__navegacion
@@ -102,7 +92,6 @@
 			box-sizing border-box
 			color $white
 			display block
-			// font-family $baseHeadingFontFamily
 			height 100%
 			margin 0
 			padding 0.5em 1em
@@ -155,52 +144,39 @@
 	.menu
 		display inline-block
 		float right
-		ul
-			background none
-			margin-top 0
-			opacity 1
-			overflow hidden
-			position relative
-			height auto
-			// top auto
-			// left 0
-			vertical-align middle
-			visibility visible
-			li
-				display inline-block
-				float left
-				a
-					color $concreto
-					text-shadow none
-					&:after // Eliminamos símbolo al final
-						display none
-					&:before
-						bottom 0
-						height 0
-						top auto
-						width 100%
-					&:hover
-					&:focus
-						// text-shadow_lindo()
-						&:before
-							// box-shadow_lindo()
-							height 100%
+		
+	.nav--listado
+		background none
+		margin-top 0
+		opacity 1
+		overflow hidden
+		position relative
+		height auto
+		vertical-align middle
+		visibility visible
+		li
+			display inline-block
+			float left
+			a
+				color $nube
+				text-shadow none
+				&:hover
+				&:focus
+					background $black_fuerte
 						
 				
-			// Eliminamos el estilo solo al border superior exepto al primer item del menú
-			li + li
-				border-top none
-				box-shadow none
+		// Eliminamos el estilo solo al border superior exepto al primer item del menú
+		li + li
+			border-top none
+			box-shadow none
 			
 	// Estilos cuando el item está siendo visitado actualmente
-	.nav
-	.menu
-		ul
-			.current_menu_item
-			.current_page_item
-				a
-					border-bottom 4px solid $rosa
-					color $white_crema
-					cursor initial
-					&:hover
-						text-decoration none
+	.nav--listado
+		.current_menu_item
+		.current_page_item
+			a
+				background none
+				border-bottom 4px solid $rosa
+				cursor initial
+				&:hover
+					text-decoration none
