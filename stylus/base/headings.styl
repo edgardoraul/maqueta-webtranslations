@@ -1,11 +1,5 @@
 /**
  * # Títulos
- *
- * Títulos h1 - h6
- * Los estilos de cada título también se asignan a una clase. De esta forma es
- * posible asignar un estilo de h3 a un h2, por ejemplo, de forma que podamos
- * respetar la semántica y aplicar los estilos adecuados a los títulos en las
- * diferentes secciones.
  */
 
 h1
@@ -14,51 +8,40 @@ h3
 h4
 h5
 h6
-  font-family $baseHeadingFontFamily
-  margin-left 0
+	font-family $fuente-Titulos
+	font-style normal
+	margin 1.5em auto 0.2em 0
+	a
+		font-family $fuente-Titulos
+		font-style normal
+		
 
-h1
-.h1 {}
-
-h2
-.h2 {}
-
-h3
-.h3 {}
-
-h4
-.h4 {}
-
-h5
-.h5 {}
-
-h6
-.h6 {}
 
 // Heading de secciones de la web en la home
 .heading
 	border-bottom 1px dotted $silver
 	margin-bottom 1.5em
 	
-	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+	h1, h2
 		color $rosa
 		// font-size 1.2em
+		font-weight lighter
 		margin 0
 		padding-right 1em
 		text-align left
 		[class^="icon-"], [class*=" icon-"]
 			float right
 			
-/*@media all and (min-width: 40em)
-	.heading
-		h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
-			font-size 1.7em*/
+// @media all and (min-width: 40em)
+// 	.heading
+// 		h1, h2
+// 			font-size 1.7em
 		
 
 .heading-item
 	padding 0.2em
 	position relative
-	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+	h1, h2, h3, h4, h5, h6
 		color $white
 		text-align center
 	

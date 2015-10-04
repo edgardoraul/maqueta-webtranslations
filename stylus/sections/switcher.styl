@@ -1,13 +1,15 @@
 // Switcher de idiomas
 .switcher
 	display inline-block
-	height 30px
 	margin 0.7em auto 0 auto
+	vertical-align middle
 	a
 		border-right 1px solid $gray
-		display table-cell
-		font-family $baseHeadingFontFamily
+		*display inline
+		display inline-block
+		font-family $fuente-Titulos
 		font-style normal
+		font-size 0.9em
 		padding 0 0.5em
 	a + a
 		border-right none
@@ -21,5 +23,6 @@
 @media all and (min-width:50em)
 	.switcher
 		float right
+		margin 0.7em auto 0 auto
 		&--home
 			float left

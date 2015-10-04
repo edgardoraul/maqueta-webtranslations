@@ -2,10 +2,10 @@
 // Variables de las Tablas
 $table-celda-color 		?= $white 		// Color de la letra
 $tabla-celda-background ?= $nube		// Fondo de celdas
-$tabla-head-background 	?= $black	// Fondo del encabezado
+$tabla-head-background 	?= $gris_fuerte	// Fondo del encabezado
 $tabla-borde-ancho 		?= 1px			// Ancho del borde
 $tabla-borde-color 		?= $gray		// Color del borde
-$tabla-tfoot-background	?= $black	// Fondo del pie de tabla
+$tabla-tfoot-background	?= $gris_fuerte	// Fondo del pie de tabla
 
 
 // Tabla en general
@@ -19,6 +19,8 @@ table
 		border $tabla-borde-ancho solid $tabla-borde-color
 		border-bottom none
 		color $table-celda-color
+		font-family $fuente-Titulos
+		font-weight bolder
 		padding 0.5em 1em
 		text-transform uppercase
 
@@ -43,9 +45,9 @@ thead
 	th
 		background $tabla-head-background
 		color $table-celda-color
-		font-family $baseHeadingFontFamily
+		font-family $fuente-Titulos
 		font-size 1.1em
-		font-weight bolder
+		font-weight normal
 		padding 0.5em 1em
 		&:first-letter
 			text-transform uppercase
@@ -59,7 +61,8 @@ tfoot
 	td
 		background $tabla-tfoot-background
 		color $table-celda-color
-		font-size 0.8em
+		font-family $fuente-Titulos
+		font-size 0.9em
 		text-align right
 	// Para darle un pequeño separador
 	td + td

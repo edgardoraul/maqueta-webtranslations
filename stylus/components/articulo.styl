@@ -2,26 +2,31 @@
 
 .articulo
 	text-align left
-	article
-		& > h3
-		& > h4
-		& > h5
-		& > h6
-			margin-top 0
-		figure
+		
+	figure
+		display block
+		margin 1em auto
+		img
 			display block
-			margin 1em auto
-			img
-				display block
-				width 100%
-			figcaption
-				background $rosa
-				color $white
-				display block
-				font-size 0.9em
-				padding 0.5em 1em
-				text-align center
+			width 100%
+		figcaption
+			background $nube
+			color $gray
+			font-family $fuente-principal
+			font-style italic
+			padding 0.5em 1em
+			position relative
+			text-align center
 			
+			&:first-letter
+				text-transform uppercase
+			
+		& + h3
+		& + h4
+		& + h5
+		& + h6
+			display inline-block
+			margin-top 0
 		
 @media all and (min-width:28em)
 	.articulo
@@ -31,7 +36,7 @@
 				display inline-block
 				float left
 				margin 0 1em 1em 0
-				max-width 450px
+				width 450px
 			
 			figure:nth-child(even)
 				float right

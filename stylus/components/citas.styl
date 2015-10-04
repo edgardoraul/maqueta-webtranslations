@@ -2,28 +2,24 @@
 
 blockquote
 cite
-	box-sizing border-box
+	// box-sizing border-box
 	color $gris_fuerte
 	font-size 1.2em
 	font-style italic 
 	position relative
 
 blockquote
+	background url('../img/iconos-png/Entypo_275e(26)_32.png') top left no-repeat
 	border 1px dashed $silver
-	border-left 3px solid $Celeste
-	display table
-	padding 1em
-	margin 1em auto
+	border-left 3px solid $rosa
+	// display table-cell
+	padding 1em 1.1em
+	margin 1em
 	text-align right
-	&:before
-		color $Celeste
-		content "\f063"
-		font-family "icon"
-		font-size 2em
-		font-style normal
-		left 0.2em
-		position absolute
-		top 0	
+
+@media all and (min-width: 480px)
+	blockquote
+		margin 1.5em 2em
 
 /*cite
 	// color $VerdeClaro

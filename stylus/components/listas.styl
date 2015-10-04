@@ -1,0 +1,22 @@
+// Listas
+ol
+ul
+	list-style-position inside
+	
+ol
+	counter-reset item
+	list-style none
+	line-height 2em
+	li
+		&:before
+			content counter(item) " -"
+			counter-increment item
+			color $rosa
+			display inline
+			// font-family 'Open Sans Condensed', 'Helvetica', sans-serif
+			font-weight bolder
+			margin-right 0.5em
+	
+ul
+	list-style-image url('../img/iconos-png/Entypo_2713(28)_32.png')
+	

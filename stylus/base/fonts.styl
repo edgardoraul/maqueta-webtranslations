@@ -1,131 +1,48 @@
-/*
- * # Fuentes
- *
- * Reglas font-face.
- * Puedes usar fuentes de Google webfonts u otros, o cargar las fuentes que
- * hayas descargado.
- */
-
-
-/**
- * Se pueden cargar las webfonts directamente desde la fuente, en lugar de
- * incluir un @import o un <link>. De esa forma nos ahorramos una petición.
- * El formato woff es ampliamente soportado por los navegadores modernos
- * http://caniuse.com/#feat=woff
- * Puedes incluir ttf para el resto.
- */
-
+// Fuentes para títulos
 @font-face {
-	font-family: 'RalewayThin';
-	src: url('fonts/RalewayThin.eot');
-	src: url('fonts/RalewayThin.eot') format('embedded-opentype'),
-	url('fonts/RalewayThin.woff2') format('woff2'),
-	url('fonts/RalewayThin.woff') format('woff'),
-	url('fonts/RalewayThin.ttf') format('truetype'),
-	url('fonts/RalewayThin.svg#RalewayThin') format('svg');
+	font-family: "Open Sans Condensed";
+	src: url('fonts/OpenSansCondensed.eot');
+	src: url('fonts/OpenSansCondensed.eot?#iefix') format('embedded-opentype'), 
+		url('fonts/OpenSansCondensed.svg#OpenSansCondensed') format('svg'),
+		url('fonts/OpenSansCondensed.woff2') format('woff2'), 
+		url('fonts/OpenSansCondensed.woff') format('woff'), 
+		url('fonts/OpenSansCondensed.ttf') format('truetype');
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-/*@font-face {
-	font-family: 'Wire One';
-	src: url('fonts/Wire-One.eot');
-	src: url('fonts/Wire-One.eot') format('embedded-opentype'),
-	local('Wire One'),
-	local('WireOne'),
-	url('fonts/Wire-One.woff2') format('woff2'),
-	url('fonts/Wire-One.woff') format('woff'),
-	url('fonts/Wire-One.ttf') format('truetype'),
-	url('fonts/Wire-One.svg#WireOne') format('svg');
-}*/
-
-@font-face {
-	font-family: 'Open Sans Condensed';
-	font-style: normal;
-	font-weight: 300;
-	src: url(fonts/OpenSansCondensed.eot);
-	src: url(fonts/OpenSansCondensed.eot) format('embedded-opentype'),
-	local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(fonts/OpenSansCondensed.woff2) format('woff2'),
-	local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(fonts/OpenSansCondensed.woff) format('woff'),
-	local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(fonts/OpenSansCondensed.svg#OpenSansCondensed) format('svg'),
-	local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(fonts/OpenSansCondensed.ttf) format('truetype');
-}
-/*@font-face {
-	font-family: 'Droid Serif';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Droid Serif'), local('DroidSerif'), url(http://fonts.gstatic.com/s/droidserif/v6/0AKsP294HTD-nvJgucYTaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
-}
+	
+// Fuente Principal
 @font-face {
 	font-family: 'Droid Serif';
-	font-style: normal;
-	font-weight: 700;
-	src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(http://fonts.gstatic.com/s/droidserif/v6/QQt14e8dY39u-eYBZmppwTqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
-}
-@font-face {
-	font-family: 'Droid Serif';
-	font-style: italic;
-	font-weight: 400;
-	src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(http://fonts.gstatic.com/s/droidserif/v6/cj2hUnSRBhwmSPr9kS5899kZXW4sYc4BjuAIFc1SXII.woff) format('woff');
-}
-@font-face {
-	font-family: 'Droid Serif';
-	font-style: italic;
-	font-weight: 700;
-	src: local('Droid Serif Bold Italic'), local('DroidSerif-BoldItalic'), url(http://fonts.gstatic.com/s/droidserif/v6/c92rD_x0V1LslSFt3-QEpgRV2F9RPTaqyJ4QibDfkzM.woff) format('woff');
+	src: url('fonts/DroidSerif.eot');
+	src: url('fonts/DroidSerif.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSerif.svg#DroidSerif') format('svg'), url('fonts/DroidSerif.ttf') format('truetype'), url('fonts/DroidSerif.woff') format('woff'), url('fonts/DroidSerif.woff2') format('woff2');
 }
 
+/*@font-face
+	// font-family 'Droid Serif'
+	src url('fonts/DroidSerifItalic.eot')
+	src url('fonts/DroidSerifItalic.eot') format('embedded-opentype'), url('fonts/DroidSerifItalic.svg#DroidSerifItalic') format('svg'), url('fonts/DroidSerifItalic.ttf') format('truetype'), url('fonts/DroidSerifItalic.woff') format('woff'), url('fonts/DroidSerifItalic.woff2') format('woff2')
+	font-style italic
 
-// Titillium
-@font-face {
-	font-family: 'Titillium Web';
-	font-style: normal;
-	font-weight: 400;
-	src: url(http://fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTcQU404wzEgdBsmVXv_TVccA.eot);
-}
-@font-face {
-	font-family: 'Titillium Web';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Titillium Web'), local('TitilliumWeb-Regular'), url(http://fonts.gstatic.com/l/font?kit=7XUFZ5tgS-tD6QamInJTcfkES7GmGX8W9rzIV8LvFLo&skey=19ee7c202c5bec48#TitilliumWeb) format('svg'), url(http://fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTcbFJZbTbly0V4A-kMlrADXE.ttf) format('truetype'), url(http://fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTcZSnX671uNZIV63UdXh3Mg0.woff2) format('woff2'), url(http://fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTcdGU7DQ8I6RFMlK0vgclk7w.woff) format('woff');
-}
-@font-face {
-	font-family: 'Titillium Web';
-	font-style: italic;
-	font-weight: 400;
-	src: local('Titillium WebItalic'), local('TitilliumWeb-Italic'), url(http://fonts.gstatic.com/l/font?kit=7XUFZ5tgS-tD6QamInJTcfkES7GmGX8W9rzIV8LvFLo&skey=19ee7c202c5bec48#TitilliumWeb) format('svg'), url(http://fonts.gstatic.com/s/titilliumweb/v4/r9OmwyQxrgzUAhaLET_KOwMz50wy8UtLqP3Z5PRrlhs.ttf) format('truetype'), url(http://fonts.gstatic.com/s/titilliumweb/v4/r9OmwyQxrgzUAhaLET_KO6qVnG43xFTRN40gwdrG-aE.woff2) format('woff2'), url(http://fonts.gstatic.com/s/titilliumweb/v4/r9OmwyQxrgzUAhaLET_KO5amZRho2btt1t2XfPnvt5c.woff) format('woff');
-}*/
+@font-face
+	// font-family 'Droid Serif'
+	src url('fonts/DroidSerifBold.eot')
+	src url('fonts/DroidSerifBold.eot') format('embedded-opentype'), url('fonts/DroidSerifBold.svg#DroidSerifBold') format('svg'), url('fonts/DroidSerifBold.ttf') format('truetype'), url('fonts/DroidSerifBold.woff') format('woff'), url('fonts/DroidSerifBold.woff2') format('woff2')
+	font-weight bolder
+
+@font-face
+	// font-family 'Droid Serif'
+	src url('fonts/DroidSerifItalicBold.eot')
+	src url('fonts/DroidSerifItalicBold.eot') format('embedded-opentype'), url('fonts/DroidSerifItalicBold.svg#DroidSerifItalicBold') format('svg'), url('fonts/DroidSerifItalicBold.ttf') format('truetype'), url('fonts/DroidSerifItalicBold.woff') format('woff'), url('fonts/DroidSerifItalicBold.woff2') format('woff2')
+	font-style italic
+	font-weight bolder*/
 
 
-// Lato
-/*@font-face {
-	font-family: 'Lato';
-	font-style: normal;
-	font-weight: 700;
-	src: url(http://fonts.gstatic.com/s/lato/v11/sBtfDPlEIwvKKU53nAG7AQ.eot);
-	}
-@font-face {
-	font-family: 'Lato';
-	font-style: normal;
-	font-weight: 700;
-	src: local('Lato Bold'), local('Lato-Bold'), url(http://fonts.gstatic.com/s/lato/v11/H2DMvhDLycM56KNuAtbJYA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/lato/v11/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff'), url(http://fonts.gstatic.com/l/font?kit=H4oiIt_Ug9TU5ast0nUT-w&skey=3480a19627739c0d#Lato) format('svg'), url(http://fonts.gstatic.com/s/lato/v11/MZ1aViPqjfvZwVD_tzjjkwLUuEpTyoUstqEm5AMlJo4.ttf) format('truetype');
-}
-*/
-// Agregados por mi
-/*@font-face {
-	font-family: 'icon';
-	src:url('fonts/icomoon.eot?-7eydz7');
-	src:url('fonts/icomoon.eot?#iefix-7eydz7') format('embedded-opentype'),
-		url('fonts/icomoon.ttf?-7eydz7') format('truetype'),
-		url('fonts/icomoon.woff?-7eydz7') format('woff'),
-		url('fonts/icomoon.svg?-7eydz7#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}*/
 
-// Los que estaban antes originalmente
-
-@font-face {
-	font-family: 'icon';
-	src: url('fonts/icomoon/icomoon.eot?-9djqav');
-	src: url('fonts/icomoon/icomoon.eot?#iefix-9djqav') format('embedded-opentype'), url('fonts/icomoon/icomoon.woff?-9djqav') format('woff'), url('fonts/icomoon/icomoon.ttf?-9djqav') format('truetype'), url('fonts/icomoon/icomoon.svg?-9djqav#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+// Iconos
+@font-face
+	font-family 'icon'
+	src url('fonts/icomoon.eot')
+	src url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.svg#icomoon') format('svg'), url('fonts/icomoon.ttf') format('truetype'), url('fonts/icomoon.woff') format('woff')
+	font-weight normal
+	font-style normal

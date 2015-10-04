@@ -15,12 +15,12 @@
 	ul
 		background $black
 		display block
-		font-family $baseHeadingFontFamily
+		font-family $fuente-Titulos
 		height 0
 		margin 0
 		opacity 0
 		padding 0
-		transition all 0.1s ease-in-out
+		// transition all 0.1s ease-in-out
 		// transition all 0.6s cubic-bezier(0.5, -0.5, 0.5, 1.5)
 		// transition all 0.3s	cubic-bezier(0.215, 0.610, 0.355, 1.000)
 		visibility hidden
@@ -33,13 +33,12 @@
 			a
 				color $gray
 				display block
+				font-family $fuente-Titulos
 				font-size 1.3em
-				font-weight bolder
 				font-style normal
 				padding 0.5em 1em
 				position relative
 				text-decoration none
-				// text-shadow_lindo()
 				transition all 0.1s ease-in-out
 
 				// Estilos al hover y al focus
@@ -91,14 +90,16 @@
 	margin 1em auto
 	padding 0
 	div
+		box-sizing border-box
 		display block
 		padding 0
 		margin 0
 		vertical-align middle
 		text-align center
 		a
-			border-bottom 1px solid $white
 			background $rosa
+			border-bottom 1px solid $white
+			box-sizing border-box
 			color $white
 			display block
 			// font-family $baseHeadingFontFamily
@@ -133,7 +134,7 @@
 		div
 			display inline-block
 			float left
-			width 50%
+			width 49.9%
 			
 		div + div
 			border-left 1px solid $white

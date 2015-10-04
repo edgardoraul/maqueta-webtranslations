@@ -1,12 +1,55 @@
-/*
-Fondos o backgrounds de algunas páginas
-*/
+// Fondos o backgrounds de algunas páginas
+html
+	height 100%
+body
+	height 100%
+	min-height 100%
+	
+.header, main, footer
+	z-index 3
+	
 .fondo
-	background url("../img/ultrabook.jpg") top left no-repeat
-	background-size 100% auto
+	background url("../img/ultrabook.jpg") top center no-repeat fixed
+	background-size auto 100%
 	background-size cover
+	min-height 100%
+	position relative
+	z-index 1
+	&:before
+		background rgba($black_puro, 0.5)
+		content ""
+		height 100%
+		left 0
+		position absolute
+		top 0
+		width 100%
+		z-index -1
+		
+		
+	
+
+
 .fondo_color
 	background $white
 	
-.wrapper
-	background rgba($black_puro, 0.4)
+// .wrapper
+// 	background rgba($black_puro, 0.4)
+	
+// Iconos .png
+.heading
+	&--blog
+		background-image url('../img/iconos-png/Entypo_e720(22)_64.png')
+	&--servicios
+		background-image url('../img/iconos-png/Entypo_2699(32)_64.png')
+	&--contacto
+		background-image url('../img/iconos-png/Entypo_2709(30)_64.png')
+	&--single
+		background-image url('../img/iconos-png/Entypo_e731(19)_64.png')
+	&--perfil
+		background-image url('../img/iconos-png/Entypo_e722(21)_64.png')
+		
+
+[class^="heading--"], [class*=" heading--"]
+	background-position 101% center
+	background-repeat no-repeat
+	padding-right 60px
